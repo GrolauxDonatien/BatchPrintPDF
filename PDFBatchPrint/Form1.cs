@@ -89,6 +89,8 @@ namespace PDFBatchPrint
                     buttonPrint.Text = "Printing...";
                     buttonStop.Enabled = true;
                     buttonStop.Text = "Stop";
+                    buttonDeselected.Enabled = false;
+                    buttonClear.Enabled = false;
                     print();
                 }
                 GlobalUnlock(hDevMode);
@@ -147,6 +149,8 @@ namespace PDFBatchPrint
             buttonPrint.Text = "Print...";
             buttonStop.Enabled = false;
             buttonStop.Text = "Stop";
+            buttonDeselected.Enabled = true;
+            buttonClear.Enabled = true;
         }
 
         private void buttonDeselected_Click(object sender, EventArgs e)
